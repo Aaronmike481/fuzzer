@@ -66,5 +66,5 @@ func main() {
     initPool()
     defer pool.Shutdown(context.Background())
     http.HandleFunc("/scan", handle)
-    log.Fatal(http.ListenAndServe(":8080", nil))
+    log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
 }

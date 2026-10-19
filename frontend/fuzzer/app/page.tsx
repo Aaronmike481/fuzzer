@@ -32,7 +32,7 @@ export default function Home() {
     };
 
     try {
-      const response = await fetch("http://172.23.182.27:8080/scan", {
+      const response = await fetch("/api/scan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestData),
